@@ -1,0 +1,44 @@
+/* 
+0 - 600px: phone
+600 - 900px tablet portrait
+900 - 1200px table landscape
+1200 - 1800 normal styles
+1800px + : big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+change px to em
+1em = 16px
+*/
+
+/********** WIDTH **********/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 600px) {@content}; // ADD this code to scss file @include respond(phone){ ADD CONTENT };
+    }
+
+    @if $breakpoint == tab-port {
+        @media (max-width: 900px) {@content}; // ADD this code to scss file @include respond(tab-port){ ADD CONTENT };
+    }
+
+    @if $breakpoint == tab-port-min {
+        @media (min-width: 900px) {@content}; // ADD this code to scss file @include respond(tab-port-min){ ADD CONTENT };
+    }
+
+    @if $breakpoint == tab-land {
+        @media (max-width: 1200px) {@content}; // ADD this code to scss file @include respond(tab-land){ ADD CONTENT };
+    }
+
+    @if $breakpoint == big-desktop {
+        @media (min-width: 1800px) {@content}; // ADD this code to scss file @include respond(big-desktop){ ADD CONTENT };
+    }
+}
+
+/********** HEIGHT **********/
+
+

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/queries.css">
+    <link rel="stylesheet" href="css/Grid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="img/png" href="images/favicon-32x32.png">
+
+    <title>Joe Fugere</title>
+
+</head>
+
+<body>
+
+    <header class="about-header">
+
+        <!---------------- HEADER LOGO ------------------->
+        <div class="header-logo">
+
+            <img src="images/jflogo.png" alt="Header Logo">
+
+        </div>
+
+        <div class="mobile__about">
+            <input type="checkbox" class="mobile__about__checkbox" id="navi-toggle">
+
+            <label for="navi-toggle" class="mobile__about__button">
+                <span class="mobile__about__icon">&nbsp;</span>
+
+            </label>
+            <div class="mobile__about__background">&nbsp;</div>
+
+            <nav class="mobile__about__nav">
+                <ul class="mobile__about__list">
+                    <li class="mobile__about__item"><a href="index.html" class="mobile__about__link">Home</a></li>
+                    <li class="mobile__about__item"><a href="about.html" class="mobile__about__link">About</a></li>
+                    <li class="mobile__about__item"><a href="#certificates" class="mobile__about__link">Work</a></li>
+                    <li class="mobile__about__item"><a href="contact.html" class="mobile__about__link">Contact</a></li>
+                </ul>
+
+
+            </nav>
+
+        </div>
+
+
+
+        <!---------------- NAVIGATION ------------------->
+
+
+
+        <nav class="navigation__about">
+            <ul class="navigation__list-about">
+                <li class="navigation__item-about"><a href="index.html" class="navigation__link-about">Home</a></li>
+                <li class="navigation__item-about"><a href="about.html" class="navigation__link-about">About</a></li>
+                <li class="navigation__item-about"><a href="#Work"
+                        class="navigation__link-about">Work</a></li>
+                <li class="navigation__item-about"><a href="contact.html" class="navigation__link-about">Contact</a>
+                </li>
+            </ul>
+
+        </nav>
+
+
+        <!--------------- Contact Form ------------------->
+        <div class="form">
+            <h2>Contact</h2>
+            <form method="POST" action="contact-form.php/" class="contact-form" id="contact-form">
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="text" name="name" id="name" placeholder="Your name" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="email" name="email" id="email" placeholder="Your email" required>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="message">Message</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <textarea name="message" id="message" placeholder="Your message"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label>&nbsp;</label>
+                    </div>
+                    <div class="btn">
+                        <button type="submit" onclick="sendEmail()" value="Submit">Submit</button>
+                    </div>
+                </div>
+                
+            </form>
+            
+        </div>
+
+        <!--------------- Footer ------------------->
+
+
+        <div class="footer-about">
+
+            <div class="social-logo-about">
+                <div class="social-logo-about">
+                    <li><a href="https://www.facebook.com/jfugere117"><img
+                                src="images/iconfinder_Colored_Facebook3_svg_5365678.png" alt="Facebook Icon"
+                                class="social-logo-facebook"></a></li>
+                    <li><a href="https://instagram.com/jfugere1983"><img
+                                src="images/iconfinder_1_Instagram_colored_svg_1_5296765.png" alt="Instagram Icon"
+                                class="social-logo-instagram"></a></li>
+
+                </div>
+
+            </div>
+
+            <div class="footer-about-copyright">
+
+
+                <p>
+                    &copy; 2020 by Joe Fugere
+                </p>
+            </div>
+
+
+        </div>
+    </header>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

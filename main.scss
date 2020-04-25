@@ -1,0 +1,383 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+
+@import "layout/footer";
+@import "layout/header";
+@import "layout/navigation";
+
+@import "pages/home";
+@import "pages/about";
+@import "pages/work";
+@import "pages/contact";
+
+
+/*
+          animation-delay: ;
+          animation-iteration-count: ;
+          animation-timing-function: ;
+          */
+        
+        /******* Background Video *********/
+        
+        .bg-video {
+            position: absolute;
+            z-index: -100;
+            width: auto;
+            height: 100vh;
+
+            @include respond(big-desktop){ 
+                width: 100vw;
+             };
+
+
+        }
+        
+        .bg-video-content {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(80%);
+
+           
+        }
+        
+        
+        .header-logo img {
+            display: flex;
+            height: 5rem;
+            position: absolute;
+            margin-left: 5rem;
+            margin-top: 1rem;
+            
+        
+        }
+   
+        
+        .heading-text-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+
+       
+        }
+        
+        .heading {
+            color: #fff;
+            backface-visibility: hidden;
+            text-transform: uppercase;
+            margin-bottom: 6rem;
+            
+            @include respond(tab-port-min) { 
+                font-size: 210%;     
+                letter-spacing: .02rem;
+                width: 100%;
+        }
+
+        @include respond(tab-port) { 
+            font-size: 107%;     
+            letter-spacing: .02rem;
+            width: 100%;
+    }
+
+        }
+        
+        .heading-main {
+            display: block;
+            font-size: 100%;
+            letter-spacing: .5rem;
+            font-weight: 100;
+            text-align: center;
+            animation-name: moveInLeft;
+            animation-duration: 3s;
+
+/*
+            @include respond(tab-port) { 
+                font-size: 80%;     
+                letter-spacing: .1rem;
+                width: 100%;
+        }
+
+            @include respond(tab-port-min) { 
+                    font-size: 100%;     
+                    letter-spacing: .3rem;
+                    width: 100%;
+            }
+
+            
+
+        
+        @include respond(big-desktop){ 
+            font-size: 150%;
+         };
+
+        */
+        }
+        
+        .heading-sub {
+            display: block;
+            font-size: 70%;
+            letter-spacing: .5rem;
+            font-weight: 300;
+            padding-top: 1rem;
+            text-align: center;
+            animation-name: slideInRight;
+            animation-duration: 3s;
+/*
+        @include respond(tab-port) { 
+            font-size: 60%;     
+            letter-spacing: .1rem;
+            width: 100%;
+    }
+
+    @include respond(phone) { 
+        font-size: 55%;     
+        letter-spacing: .07rem;
+        width: 100%;
+}
+*/
+        }
+        
+        
+        @keyframes slideInRight {
+            0% {
+                opacity: 0.3;
+                transform: translateX(10rem);
+            }
+        
+            80% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        
+            100% {
+                opacity: 1.5;
+                transform: translate(0);
+            }
+        }
+        
+        @keyframes moveInLeft {
+            0% {
+                opacity: 0.3;
+                transform: translateX(-10rem);
+            }
+        
+            80% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        
+            100% {
+                opacity: 1.5;
+                transform: translate(0);
+            }
+        
+        }
+        
+        
+       
+        
+        /*********** About Page CSS ************/
+        
+/*
+        hr {
+            background-color: #000;
+            margin: auto;
+            margin-top: 4rem;
+            width: 80%;
+            border: none;
+            height: .1rem;
+            color: #000;  
+        }
+        */
+
+        .about-header {
+            height: 7rem;
+            background-color: #000;
+
+           
+        }
+
+
+        .about-me {
+            background-color: #E5E4E2;
+            height: 100vh;
+
+        }
+        
+        .about-me-description-1 {
+            color: #000;
+            font-size: 2rem;
+            padding: 3rem;
+            text-align: center;
+            animation-name: fadeInDown;
+            animation-duration: 2s;
+            width: 100%;
+
+            
+        }
+        
+        
+        .about-me-description-2 {
+            color: #000;
+            font-size: 2rem;
+            padding: 3.5rem;
+            text-align: center;
+            animation-name: fadeInUp;
+            animation-duration: 2s;
+
+            
+            @include respond(tab-port){ 
+                font-size: 120%;
+                width: 100vw;
+            };
+        }
+
+       
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0.3;
+                transform: translateY(-10rem);
+            }
+        
+            80% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        
+            100% {
+                opacity: 1.5;
+                transform: translate(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0.3;
+                transform: translateY(10rem);
+            }
+        
+            80% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        
+            100% {
+                opacity: 1.5;
+                transform: translate(0);
+            }
+        }
+        
+        /************ Contact Form CSS **************/
+        
+        .contact-header {
+            background-color: #fff;
+            height: 0;
+        }
+        
+        .form{
+            background-color: #ecf0f1;
+            text-align: center;
+            margin: 7rem 3rem;
+          }
+        
+          .form h2 {
+            padding-top: 4rem;
+            margin-bottom: 4rem;
+            
+            
+          }
+        
+          .contact-form {
+            width: 60%;
+            margin: 0 auto;
+            font-weight: 400;
+        
+        
+          }
+        
+          input {
+            width: 80%;
+            height: .7rem;
+            padding: 1.5rem;
+            border: none;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1rem;
+          }
+        
+          input[type-name],
+          input[type-email],
+          textarea {
+            
+            width: 80%;
+            padding: 1.5rem;
+            border-radius: .3rem;
+            
+        
+          }
+        
+          textarea {
+            height: 7rem;
+            border: none;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1rem;
+          }
+        
+          
+          .row {
+            padding: .5rem;
+            text-align: center;
+        
+          }
+        
+        .btn {
+            display: block;
+            max-width: 30rem;
+            margin: auto;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+          }
+          
+          .btn:hover {
+            transform: translateY(-.3rem);
+          }
+          
+          .btn:active {
+            transform: translateY(-.1rem);
+          }
+          
+          button[type="submit"] {
+            color: #fff;
+            background-color: #0c98da;
+            height: 3.5rem;
+            width: 8rem;
+            border-radius: 10rem;
+            padding: 1rem .3rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            font-weight: 300;
+            border: none;
+            cursor: pointer;
+            transition: all .2s;
+          }
+          
+          button[type="submit"]:hover {
+            box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+          }
+          
+          button[type="submit"]:active {
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+          }
+        
+        
